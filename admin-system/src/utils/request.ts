@@ -70,7 +70,7 @@ request.interceptors.response.use(
       } else if (status === 500) {
         showError('服务器错误')
       } else {
-        showError(error.response.data?.message || '请求失败')
+        showError(error.response.data?.message || error.response.data?.detail || '请求失败')
       }
     } else if (!error.response && !isSilent) {
       showError('网络错误')
