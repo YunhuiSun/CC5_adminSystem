@@ -1,0 +1,72 @@
+.sidebar {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: bold;
+  flex-shrink: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.menu {
+  border-right: none;
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background: transparent !important;
+}
+
+/* 默认风格样式 - 原始Ant Design Pro深蓝侧边栏 */
+.default {
+  background: #001529;
+}
+
+.default .logo {
+  color: #ffffff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background: #002140;
+}
+
+/* 科技风样式 */
+.tech {
+  background: linear-gradient(180deg, #0a1628 0%, #0f1d32 100%);
+}
+
+.tech .logo {
+  color: #00d4ff;
+  border-bottom: 1px solid #1e3a5f;
+  text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+  background: linear-gradient(90deg, transparent, rgba(0, 212, 255, 0.1), transparent);
+}
+
+/* 古典风样式 */
+.classic {
+  background: linear-gradient(180deg, #faf8f3 0%, #f5f0e6 100%);
+}
+
+.classic .logo {
+  color: #8b4513;
+  border-bottom: 2px solid #d4c4a8;
+  background: linear-gradient(90deg, transparent, rgba(139, 69, 19, 0.05), transparent);
+  font-family: 'SimSun', 'STSong', serif;
+}
+
+/* 现代风样式 */
+.modern {
+  background: #ffffff;
+}
+
+.modern .logo {
+  color: #1677ff;
+  border-bottom: 1px solid #f0f0f0;
+  background: #ffffff;
+}

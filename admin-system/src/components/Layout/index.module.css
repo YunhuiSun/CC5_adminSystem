@@ -1,0 +1,84 @@
+.layout {
+  min-height: 100vh;
+}
+
+.content {
+  margin: 0;
+}
+
+.main {
+  padding: 16px;
+  min-height: calc(100vh - 64px);
+  transition: all 0.3s ease;
+}
+
+.sider {
+  overflow: auto;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  transition: all 0.2s;
+}
+
+.mainLayout {
+  transition: margin-left 0.2s;
+  min-height: 100vh;
+}
+
+/* 科技风样式 - 简化 */
+.tech .sider {
+  background: #0a1628;
+  border-right: 1px solid #1e3a5f;
+}
+
+.tech .mainLayout {
+  background: #0f1d32;
+}
+
+.tech .main {
+  background: #0f1d32;
+}
+
+/* 古典风样式 - 简化 */
+.classic .sider {
+  background: #faf8f3;
+  border-right: 1px solid #d4c4a8;
+}
+
+.classic .mainLayout {
+  background: #f5f0e6;
+}
+
+.classic .main {
+  background: #fffef9;
+}
+
+/* 现代风样式 - 简化 */
+.modern .sider {
+  background: #ffffff;
+  border-right: 1px solid #f0f0f0;
+}
+
+.modern .mainLayout {
+  background: #f5f5f5;
+}
+
+.modern .main {
+  background: #ffffff;
+}
+
+/* 默认风格样式 - 原始Ant Design Pro风格 */
+.default .sider {
+  background: #001529;
+  border-right: none;
+}
+
+.default .mainLayout {
+  background: #f0f2f5;
+}
+
+.default .main {
+  background: #ffffff;
+}

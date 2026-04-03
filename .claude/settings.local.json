@@ -1,0 +1,31 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm create:*)",
+      "Bash(npm install:*)",
+      "Bash(npm run:*)",
+      "Bash(mysql:*)",
+      "Bash(mvn spring-boot:run)",
+      "Bash(java:*)",
+      "Bash(ls -la target/*.jar)",
+      "Bash(ls:*)",
+      "Bash(mvn clean:*)",
+      "Bash(curl -s http://localhost:8080/api/auth/login -X POST -H \"Content-Type: application/json\" -d \"{\\\\\"username\\\\\":\\\\\"admin\\\\\",\\\\\"password\\\\\":\\\\\"123456\\\\\"}\")",
+      "Bash(curl:*)",
+      "Bash(pkill -f \"spring-boot:run\")",
+      "Bash(netstat -ano)",
+      "Bash(taskkill:*)",
+      "Bash(pip install:*)",
+      "Bash(python:*)",
+      "Bash(pageSize=10 2>&1)",
+      "Bash(findstr :8000)",
+      "Bash(claude:*)",
+      "Bash(npx playwright:*)",
+      "Bash(node playwright-demo.cjs)",
+      "WebSearch",
+      "Bash(ffmpeg -version)",
+      "Bash(node:*)",
+      "Skill(update-config)"
+    ]
+  }
+}

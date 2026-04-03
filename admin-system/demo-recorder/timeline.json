@@ -1,0 +1,132 @@
+{
+  "title": "后台管理系统演示",
+  "description": "演示后台管理系统的核心功能",
+  "scenes": [
+    {
+      "id": "login",
+      "title": "系统登录",
+      "description": "演示登录功能",
+      "duration": 6000,
+      "narration": "欢迎使用后台管理系统演示。首先，我们输入用户名 admin 和密码 123456 进行登录。",
+      "actions": [
+        { "type": "goto", "url": "http://localhost:5178/login" },
+        { "type": "wait", "ms": 1000 },
+        { "type": "fill", "selector": "input[placeholder='用户名: admin']", "value": "admin" },
+        { "type": "fill", "selector": "input[placeholder='密码: 123456']", "value": "123456" },
+        { "type": "wait", "ms": 500 },
+        { "type": "click", "selector": "button[type='submit']" },
+        { "type": "waitForURL", "pattern": "**/dashboard" },
+        { "type": "wait", "ms": 1500 }
+      ]
+    },
+    {
+      "id": "dashboard",
+      "title": "仪表盘",
+      "description": "展示系统概览",
+      "duration": 5000,
+      "narration": "登录成功！现在我们进入了系统仪表盘，可以查看各项数据的统计概览。",
+      "actions": [
+        { "type": "wait", "ms": 2000 }
+      ]
+    },
+    {
+      "id": "user-management",
+      "title": "用户管理",
+      "description": "演示用户管理功能",
+      "duration": 8000,
+      "narration": "接下来，我们进入用户管理模块。这里可以查看、添加、编辑和删除系统用户。",
+      "actions": [
+        { "type": "click", "selector": "text=用户权限" },
+        { "type": "wait", "ms": 500 },
+        { "type": "click", "selector": "text=用户管理" },
+        { "type": "wait", "ms": 1500 }
+      ]
+    },
+    {
+      "id": "add-user",
+      "title": "新增用户",
+      "description": "演示添加新用户",
+      "duration": 10000,
+      "narration": "点击新增用户按钮，填写用户信息。输入用户名、密码、昵称、邮箱和手机号，然后选择用户角色。",
+      "actions": [
+        { "type": "click", "selector": "text=新增用户" },
+        { "type": "wait", "ms": 800 },
+        { "type": "fill", "selector": "input[placeholder='请输入用户名']", "value": "testuser" },
+        { "type": "fill", "selector": "input[placeholder='请输入密码']", "value": "123456" },
+        { "type": "fill", "selector": "input[placeholder='请输入昵称']", "value": "测试用户" },
+        { "type": "fill", "selector": "input[placeholder='请输入邮箱']", "value": "test@example.com" },
+        { "type": "fill", "selector": "input[placeholder='请输入手机号']", "value": "13800138099" },
+        { "type": "click", "selector": ".ant-form-item:has-text('角色') .ant-select" },
+        { "type": "wait", "ms": 300 },
+        { "type": "click", "selector": ".ant-select-dropdown:visible .ant-select-item:has-text('普通用户')" },
+        { "type": "wait", "ms": 500 }
+      ]
+    },
+    {
+      "id": "close-modal",
+      "title": "关闭弹窗",
+      "description": "关闭新增用户弹窗",
+      "duration": 3000,
+      "narration": "填写完成后，点击取消按钮关闭弹窗。",
+      "actions": [
+        { "type": "click", "selector": ".ant-modal-footer button.ant-btn-default" },
+        { "type": "wait", "ms": 1000 }
+      ]
+    },
+    {
+      "id": "role-management",
+      "title": "角色管理",
+      "description": "演示角色管理功能",
+      "duration": 5000,
+      "narration": "现在进入角色管理页面，可以查看和管理系统中的所有角色。",
+      "actions": [
+        { "type": "goto", "url": "http://localhost:5178/role/list" },
+        { "type": "wait", "ms": 1500 }
+      ]
+    },
+    {
+      "id": "menu-management",
+      "title": "菜单管理",
+      "description": "演示菜单管理功能",
+      "duration": 5000,
+      "narration": "这是菜单管理页面，用于配置系统的导航菜单结构。",
+      "actions": [
+        { "type": "goto", "url": "http://localhost:5178/menu/list" },
+        { "type": "wait", "ms": 1500 }
+      ]
+    },
+    {
+      "id": "login-log",
+      "title": "登录日志",
+      "description": "演示登录日志功能",
+      "duration": 5000,
+      "narration": "系统监控模块记录了所有用户的登录日志，便于安全审计。",
+      "actions": [
+        { "type": "goto", "url": "http://localhost:5178/log/login" },
+        { "type": "wait", "ms": 1500 }
+      ]
+    },
+    {
+      "id": "operation-log",
+      "title": "操作日志",
+      "description": "演示操作日志功能",
+      "duration": 5000,
+      "narration": "操作日志记录了用户在系统中的所有操作行为，方便追踪和排查问题。",
+      "actions": [
+        { "type": "goto", "url": "http://localhost:5178/log/operation" },
+        { "type": "wait", "ms": 1500 }
+      ]
+    },
+    {
+      "id": "end",
+      "title": "演示结束",
+      "description": "返回仪表盘并结束",
+      "duration": 4000,
+      "narration": "演示到此结束，感谢观看！",
+      "actions": [
+        { "type": "goto", "url": "http://localhost:5178/dashboard" },
+        { "type": "wait", "ms": 2000 }
+      ]
+    }
+  ]
+}
