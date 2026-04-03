@@ -54,7 +54,7 @@ request.interceptors.response.use(
   },
   (error) => {
     // 某些请求不需要显示错误弹窗
-    const silentUrls = ['/role/all']
+    const silentUrls = ['/role/all', '/auth/login']
     const requestUrl = error.config?.url || ''
     const isSilent = silentUrls.some(url => requestUrl.includes(url))
 
@@ -78,6 +78,12 @@ request.interceptors.response.use(
       return Promise.reject(new Error(errorMsg))
     } else if (!error.response && !isSilent) {
       showError('网络错误')
+    }
+
+    // 对于 silentUrls 中的请求，只返回错误对象，不显示顶部提示
+    if (isSilent && error.response) {
+      const errorMsg = error.response.data?.message || error.response.data?.detail || '请求失败'
+      return Promise.reject(new Error(errorMsg))
     }
 
     return Promise.reject(error)
