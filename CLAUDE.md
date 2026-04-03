@@ -323,3 +323,51 @@ uvicorn main:app --host 0.0.0.0 --port 8000
 ---
 
 *最后更新：2025年4月*
+
+---
+
+## 自动 Git 提交
+
+项目配置了自动提交脚本，在每次会话完成代码修改后会自动执行。
+
+### 使用方式
+
+Claude Code 会在完成任务后自动调用以下命令提交代码：
+
+```bash
+# 使用当前会话的问题作为提交信息
+node claude-auto-commit.js "本次会话的问题内容"
+```
+
+### 提交脚本说明
+
+| 脚本文件 | 用途 |
+|---------|------|
+| `claude-auto-commit.js` | Claude Code 自动调用（推荐） |
+| `auto-commit.js` | 手动执行 Node.js 版本 |
+| `auto-commit.bat` | Windows 批处理版本 |
+| `auto-commit.ps1` | PowerShell 版本 |
+| `auto-commit.sh` | Bash 版本（Linux/Mac） |
+
+### 手动提交示例
+
+```bash
+# 使用默认提交信息
+node auto-commit.js
+
+# 使用自定义提交信息
+node auto-commit.js "修复用户登录bug"
+
+# Windows 批处理
+auto-commit.bat "添加新功能"
+
+# PowerShell
+.\auto-commit.ps1 "更新文档"
+```
+
+提交成功后会播放提示音并在控制台输出：
+```
+==========================================
+本次任务所修改代码已提交至Git!!!
+==========================================
+```
