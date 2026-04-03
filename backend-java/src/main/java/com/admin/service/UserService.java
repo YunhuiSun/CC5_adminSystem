@@ -1,6 +1,7 @@
 package com.admin.service;
 
 import com.admin.dto.LoginDTO;
+import com.admin.dto.PasswordChangeDTO;
 import com.admin.dto.UserDTO;
 import com.admin.vo.LoginVO;
 import com.admin.vo.UserVO;
@@ -14,4 +15,5 @@ public interface UserService {
     void addUser(UserDTO userDTO);
     void updateUser(UserDTO userDTO);
     void deleteUser(Long id);
+    void changePassword(String username, PasswordChangeDTO passwordChangeDTO);
 }

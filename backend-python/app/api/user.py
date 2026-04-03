@@ -2,9 +2,10 @@ from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 from app.db.models import get_db, User, Role
 from app.schemas.schemas import (
-    UserCreate, UserUpdate, UserResponse, Result, PageResult, PageQuery
+    UserCreate, UserUpdate, UserResponse, Result, PageResult, PageQuery, PasswordChangeRequest
 )
-from app.core.security import get_password_hash
+from app.core.security import get_password_hash, verify_password
+from app.core.auth import get_current_user
 from typing import Optional
 
 router = APIRouter(prefix="/user", tags=["用户管理"])
@@ -111,3 +112,21 @@ def delete_user(user_id: int, db: Session = Depends(get_db)):
     db.commit()
 
     return Result.success()
+
+
+@router.put("/password", response_model=Result)
+def change_password(
+    data: PasswordChangeRequest,
+    db: Session = Depends(get_db),
+    current_user: User = Depends(get_current_user)
+):
+    """修改当前用户密码"""
+    # 验证原密码
+    if not verify_password(data.oldPassword, current_user.password):
+        raise HTTPException(status_code=400, detail="原密码错误")
+
+    # 更新密码
+    current_user.password = get_password_hash(data.newPassword)
+    db.commit()
+
+    return Result.success(message="密码修改成功")

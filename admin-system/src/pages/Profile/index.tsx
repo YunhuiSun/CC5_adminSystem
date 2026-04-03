@@ -13,7 +13,7 @@ import {
 } from 'antd'
 import { UserOutlined, EditOutlined, LockOutlined, SafetyOutlined } from '@ant-design/icons'
 import { useUserStore } from '@/store/user'
-import { updateUser } from '@/api/user'
+import { updateUser, changePassword } from '@/api/user'
 import styles from './index.module.css'
 
 const { TabPane } = Tabs
@@ -53,12 +53,14 @@ const ProfilePage = () => {
     try {
       setPasswordLoading(true)
       const values = await passwordForm.validateFields()
-      // TODO: 调用修改密码接口
-      console.log('修改密码:', values)
+      await changePassword({
+        oldPassword: values.oldPassword,
+        newPassword: values.newPassword
+      })
       message.success('密码修改成功')
       passwordForm.resetFields()
-    } catch {
-      message.error('修改失败')
+    } catch (error: any) {
+      message.error(error.response?.data?.message || '修改失败')
     } finally {
       setPasswordLoading(false)
     }

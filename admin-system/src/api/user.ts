@@ -58,7 +58,7 @@ export const deleteUser = (id: number): Promise<void> => {
   return request.delete(`/user/${id}`)
 }
 
-// 批量删除用户
-export const batchDeleteUser = (ids: number[]): Promise<void> => {
-  return request.delete('/user/batch', { data: { ids } })
+// 修改密码
+export const changePassword = (data: { oldPassword: string; newPassword: string }): Promise<void> => {
+  return request.put('/user/password', data)
 }

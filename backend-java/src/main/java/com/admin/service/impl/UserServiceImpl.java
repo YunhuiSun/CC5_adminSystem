@@ -1,6 +1,7 @@
 package com.admin.service.impl;
 
 import com.admin.dto.LoginDTO;
+import com.admin.dto.PasswordChangeDTO;
 import com.admin.dto.UserDTO;
 import com.admin.entity.User;
 import com.admin.entity.Role;
@@ -111,6 +112,21 @@ public class UserServiceImpl implements UserService {
     @Override
     public void deleteUser(Long id) {
         userMapper.deleteById(id);
+    }
+
+    @Override
+    public void changePassword(String username, PasswordChangeDTO passwordChangeDTO) {
+        User user = userMapper.selectByUsername(username);
+        if (user == null) {
+            throw new RuntimeException("用户不存在");
+        }
+        // 验证原密码
+        if (!passwordEncoder.matches(passwordChangeDTO.getOldPassword(), user.getPassword())) {
+            throw new RuntimeException("原密码错误");
+        }
+        // 更新密码
+        user.setPassword(passwordEncoder.encode(passwordChangeDTO.getNewPassword()));
+        userMapper.updateById(user);
     }
 
     private UserVO convertToVO(User user) {

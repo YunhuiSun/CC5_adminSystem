@@ -5,18 +5,12 @@ from app.core.config import settings
 
 
 def verify_password(plain_password: str, hashed_password: str) -> bool:
-    """验证密码 - 临时使用简单比较，生产环境请使用bcrypt"""
-    # 由于bcrypt库安装问题，临时使用简单验证
-    # 生产环境请使用: from passlib.context import CryptContext
+    """验证密码"""
     import hashlib
-    # 检查是否是BCrypt哈希（以$2开头）
-    if hashed_password.startswith('$2'):
-        # 对于测试数据，我们知道密码是123456
-        # 计算123456的哈希并与存储的哈希比较
-        test_hash = hashlib.sha256(plain_password.encode()).hexdigest()
-        # 临时方案：直接比较明文（仅用于测试！）
-        return plain_password == "123456"
-    return plain_password == hashed_password
+    # 计算明文密码的哈希
+    plain_hash = hashlib.sha256(plain_password.encode()).hexdigest()
+    # 比较哈希值
+    return plain_hash == hashed_password
 
 
 def get_password_hash(password: str) -> str:

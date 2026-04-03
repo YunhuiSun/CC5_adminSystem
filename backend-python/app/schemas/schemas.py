@@ -59,6 +59,11 @@ class UserUpdate(UserBase):
     password: Optional[str] = None
 
 
+class PasswordChangeRequest(BaseModel):
+    oldPassword: str = Field(..., min_length=1, description="原密码")
+    newPassword: str = Field(..., min_length=6, description="新密码")
+
+
 class UserResponse(BaseModel):
     id: int
     username: str
