@@ -1,6 +1,6 @@
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { Form, Input, Button, Card, message, Checkbox } from 'antd'
+import { Form, Input, Button, Card, Checkbox } from 'antd'
 import { UserOutlined, LockOutlined } from '@ant-design/icons'
 import { useUserStore } from '@/store/user'
 import { login } from '@/api/user'
@@ -10,17 +10,31 @@ const Login = () => {
   const navigate = useNavigate()
   const { setToken, setUser } = useUserStore()
   const [loading, setLoading] = useState(false)
+  const [usernameError, setUsernameError] = useState('')
+  const [passwordError, setPasswordError] = useState('')
+  const usernameRef = useRef<any>(null)
+  const passwordRef = useRef<any>(null)
 
   const onFinish = async (values: { username: string; password: string; remember?: boolean }) => {
     setLoading(true)
+    setUsernameError('')
+    setPasswordError('')
     try {
       const result = await login({ username: values.username, password: values.password })
       setToken(result.token)
       setUser(result.user)
-      message.success('登录成功')
       navigate('/')
-    } catch (error) {
-      message.error((error as Error).message)
+    } catch (error: any) {
+      const errorMsg = error.message || '登录失败'
+      if (errorMsg.includes('用户不存在')) {
+        setUsernameError('用户不存在')
+        usernameRef.current?.focus()
+      } else if (errorMsg.includes('密码错误')) {
+        setPasswordError('密码错误')
+        passwordRef.current?.focus()
+      } else {
+        setPasswordError(errorMsg)
+      }
     } finally {
       setLoading(false)
     }
@@ -39,20 +53,28 @@ const Login = () => {
           <Form.Item
             name="username"
             rules={[{ required: true, message: '请输入用户名' }]}
+            validateStatus={usernameError ? 'error' : ''}
+            help={usernameError}
           >
             <Input
+              ref={usernameRef}
               prefix={<UserOutlined />}
               placeholder="用户名: admin"
+              onChange={() => setUsernameError('')}
             />
           </Form.Item>
 
           <Form.Item
             name="password"
             rules={[{ required: true, message: '请输入密码' }]}
+            validateStatus={passwordError ? 'error' : ''}
+            help={passwordError}
           >
             <Input.Password
+              ref={passwordRef}
               prefix={<LockOutlined />}
               placeholder="密码: 123456"
+              onChange={() => setPasswordError('')}
             />
           </Form.Item>
 

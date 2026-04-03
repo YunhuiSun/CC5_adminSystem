@@ -164,8 +164,8 @@ def login(request: Request, login_request: LoginRequest, db: Session = Depends(g
     user = db.query(User).filter(User.username == username).first()
     if not user:
         print("DEBUG: 用户不存在")
-        record_login_log(db, username, ip, location, browser, os, 0, "用户名或密码错误")
-        raise HTTPException(status_code=400, detail="用户名或密码错误")
+        record_login_log(db, username, ip, location, browser, os, 0, "用户不存在")
+        raise HTTPException(status_code=400, detail="用户不存在")
 
     print(f"DEBUG: 找到用户: {user.username}")
 
@@ -173,8 +173,8 @@ def login(request: Request, login_request: LoginRequest, db: Session = Depends(g
     print(f"DEBUG: 密码验证结果: {verify_result}")
 
     if not verify_result:
-        record_login_log(db, username, ip, location, browser, os, 0, "用户名或密码错误")
-        raise HTTPException(status_code=400, detail="用户名或密码错误")
+        record_login_log(db, username, ip, location, browser, os, 0, "密码错误")
+        raise HTTPException(status_code=400, detail="密码错误")
 
     if user.status == 0:
         record_login_log(db, username, ip, location, browser, os, 0, "账号已被禁用")

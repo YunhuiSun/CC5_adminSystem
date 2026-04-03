@@ -25,7 +25,15 @@
       "WebSearch",
       "Bash(ffmpeg -version)",
       "Bash(node:*)",
-      "Skill(update-config)"
+      "Skill(update-config)",
+      "Bash(pkill -9 -f python)",
+      "Bash(pkill -9 -f uvicorn)",
+      "Bash(findstr LISTENING)",
+      "Bash(tasklist)",
+      "Bash(findstr python:*)",
+      "Bash(git reset:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)"
     ]
   }
 }
