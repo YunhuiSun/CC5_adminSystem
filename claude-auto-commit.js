@@ -54,6 +54,14 @@ async function autoCommitAfterTask(commitMessage) {
     if (!status.trim()) {
       const noChangeMsg = '【自动提交】没有需要提交的修改';
       console.log(noChangeMsg);
+
+      // 播放提示音和人声（Windows）
+      try {
+        execSync('powershell -c "$voice = New-Object -ComObject SAPI.SPVoice; $voice.Speak(\'没有需要提交的修改\') | Out-Null"', { stdio: 'pipe' });
+      } catch (e) {
+        // 忽略提示音错误
+      }
+
       return {
         success: true,
         committed: false,
@@ -84,9 +92,10 @@ async function autoCommitAfterTask(commitMessage) {
 
     console.log(output);
 
-    // 播放提示音（Windows）
+    // 播放提示音和人声（Windows）
     try {
       execSync('powershell -c "[console]::beep(800, 300); [console]::beep(1000, 300)"', { stdio: 'pipe' });
+      execSync('powershell -c "$voice = New-Object -ComObject SAPI.SPVoice; $voice.Speak(\'提交Git成功\') | Out-Null"', { stdio: 'pipe' });
     } catch (e) {
       // 忽略提示音错误
     }
@@ -99,6 +108,15 @@ async function autoCommitAfterTask(commitMessage) {
   } catch (error) {
     const errorMsg = `【自动提交】提交失败: ${error.message}`;
     console.log(errorMsg);
+
+    // 播放失败提示音和人声（Windows）
+    try {
+      execSync('powershell -c "[console]::beep(400, 500); [console]::beep(300, 500)"', { stdio: 'pipe' });
+      execSync('powershell -c "$voice = New-Object -ComObject SAPI.SPVoice; $voice.Speak(\'提交Git失败\') | Out-Null"', { stdio: 'pipe' });
+    } catch (e) {
+      // 忽略提示音错误
+    }
+
     return {
       success: false,
       committed: false,
