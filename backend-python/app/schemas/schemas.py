@@ -11,8 +11,8 @@ class Result(BaseModel):
     data: Optional[dict] = None
 
     @classmethod
-    def success(cls, data=None):
-        return cls(code=200, message="success", data=data)
+    def success(cls, data=None, message="success"):
+        return cls(code=200, message=message, data=data)
 
     @classmethod
     def error(cls, message: str, code: int = 500):

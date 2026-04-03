@@ -60,7 +60,8 @@ const ProfilePage = () => {
       message.success('密码修改成功')
       passwordForm.resetFields()
     } catch (error: any) {
-      message.error(error.response?.data?.message || '修改失败')
+      // 错误已经在拦截器中显示，这里不再重复显示
+      console.error('修改密码失败:', error)
     } finally {
       setPasswordLoading(false)
     }
