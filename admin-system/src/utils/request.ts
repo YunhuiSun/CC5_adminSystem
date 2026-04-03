@@ -60,6 +60,7 @@ request.interceptors.response.use(
 
     if (error.response && !isSilent) {
       const { status } = error.response
+      const errorMsg = error.response.data?.message || error.response.data?.detail || '请求失败'
 
       if (status === 401) {
         showError('登录已过期，请重新登录')
@@ -70,8 +71,11 @@ request.interceptors.response.use(
       } else if (status === 500) {
         showError('服务器错误')
       } else {
-        showError(error.response.data?.message || error.response.data?.detail || '请求失败')
+        showError(errorMsg)
       }
+
+      // 返回包含错误消息的 Error 对象
+      return Promise.reject(new Error(errorMsg))
     } else if (!error.response && !isSilent) {
       showError('网络错误')
     }
