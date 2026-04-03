@@ -38,6 +38,7 @@ const AppHeader = ({ collapsed, setCollapsed }: AppHeaderProps) => {
       key: 'profile',
       icon: <UserOutlined />,
       label: '个人中心',
+      onClick: () => navigate('/profile'),
     },
     {
       key: 'logout',

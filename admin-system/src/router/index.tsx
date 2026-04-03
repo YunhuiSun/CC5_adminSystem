@@ -8,6 +8,7 @@ import Role from '@/pages/Role'
 import Menu from '@/pages/Menu'
 import OperationLog from '@/pages/Log/OperationLog'
 import LoginLog from '@/pages/Log/LoginLog'
+import Profile from '@/pages/Profile'
 
 // 路由守卫组件
 const PrivateRoute = ({ children }: { children: React.ReactNode }) => {
@@ -56,6 +57,10 @@ const Router = () => {
         {
           path: 'log/login',
           element: <LoginLog />,
+        },
+        {
+          path: 'profile',
+          element: <Profile />,
         },
       ],
     },

@@ -1,0 +1,38 @@
+.container {
+  padding: 0;
+}
+
+.profileCard {
+  text-align: center;
+}
+
+.avatarSection {
+  padding: 24px 0;
+  border-bottom: 1px solid #f0f0f0;
+  margin-bottom: 24px;
+}
+
+.avatar {
+  margin-bottom: 16px;
+  background: #1677ff;
+}
+
+.username {
+  margin: 0 0 8px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.role {
+  margin: 0;
+  color: rgba(0, 0, 0, 0.45);
+}
+
+.infoList {
+  text-align: left;
+}
+
+.form {
+  max-width: 400px;
+  padding-top: 16px;
+}
