@@ -4,7 +4,7 @@ from app.core.config import settings
 from app.api import auth, user, role, menu, log
 from app.middleware.operation_log import setup_operation_log_middleware
 
-# 创建FastAPI应用
+# 创建FastAPI应用 hello
 app = FastAPI(
     title=settings.APP_NAME,
     version=settings.APP_VERSION,
