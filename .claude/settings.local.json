@@ -21,7 +21,7 @@
       "Bash(findstr :8000)",
       "Bash(claude:*)",
       "Bash(npx playwright:*)",
-      "Bash(node playwright-demo.cjs)",
+      "Bash(node scripts/playwright-demo.cjs)",
       "WebSearch",
       "Bash(ffmpeg -version)",
       "Bash(node:*)",
