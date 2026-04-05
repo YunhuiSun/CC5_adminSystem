@@ -33,7 +33,8 @@
       "Bash(findstr python:*)",
       "Bash(git reset:*)",
       "Bash(git add:*)",
-      "Bash(git commit:*)"
+      "Bash(git commit:*)",
+      "Skill(statusline)"
     ]
   }
 }
