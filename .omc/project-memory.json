@@ -1,0 +1,275 @@
+{
+  "version": "1.0.0",
+  "lastScanned": 1775396720291,
+  "projectRoot": "D:\\code\\claudecode\\CC5_adminSystem",
+  "techStack": {
+    "languages": [],
+    "frameworks": [],
+    "packageManager": null,
+    "runtime": null
+  },
+  "build": {
+    "buildCommand": null,
+    "testCommand": null,
+    "lintCommand": null,
+    "devCommand": null,
+    "scripts": {}
+  },
+  "conventions": {
+    "namingStyle": null,
+    "importStyle": null,
+    "testPattern": null,
+    "fileOrganization": null
+  },
+  "structure": {
+    "isMonorepo": false,
+    "workspaces": [],
+    "mainDirectories": [
+      "docs",
+      "scripts"
+    ],
+    "gitBranches": null
+  },
+  "customNotes": [],
+  "directoryMap": {
+    "admin-system": {
+      "path": "admin-system",
+      "purpose": null,
+      "fileCount": 11,
+      "lastAccessed": 1775396720268,
+      "keyFiles": [
+        "eslint.config.js",
+        "index.html",
+        "package-lock.json",
+        "package.json",
+        "playwright-demo.cjs"
+      ]
+    },
+    "backend-java": {
+      "path": "backend-java",
+      "purpose": null,
+      "fileCount": 1,
+      "lastAccessed": 1775396720268,
+      "keyFiles": [
+        "pom.xml"
+      ]
+    },
+    "backend-python": {
+      "path": "backend-python",
+      "purpose": null,
+      "fileCount": 3,
+      "lastAccessed": 1775396720268,
+      "keyFiles": [
+        "hello.py",
+        "main.py",
+        "requirements.txt"
+      ]
+    },
+    "database": {
+      "path": "database",
+      "purpose": null,
+      "fileCount": 2,
+      "lastAccessed": 1775396720268,
+      "keyFiles": [
+        "data.sql",
+        "schema.sql"
+      ]
+    },
+    "docs": {
+      "path": "docs",
+      "purpose": "Documentation",
+      "fileCount": 3,
+      "lastAccessed": 1775396720269,
+      "keyFiles": [
+        "API.md",
+        "claude-code-auto-git-commit.md",
+        "DEPLOY.md"
+      ]
+    },
+    "screenshots": {
+      "path": "screenshots",
+      "purpose": null,
+      "fileCount": 0,
+      "lastAccessed": 1775396720269,
+      "keyFiles": []
+    },
+    "scripts": {
+      "path": "scripts",
+      "purpose": "Build/utility scripts",
+      "fileCount": 7,
+      "lastAccessed": 1775396720269,
+      "keyFiles": [
+        "auto-commit.bat",
+        "auto-commit.js",
+        "auto-commit.ps1",
+        "auto-commit.sh",
+        "claude-auto-commit.js"
+      ]
+    },
+    "admin-system\\docs": {
+      "path": "admin-system\\docs",
+      "purpose": "Documentation",
+      "fileCount": 0,
+      "lastAccessed": 1775396720269,
+      "keyFiles": []
+    },
+    "admin-system\\node_modules": {
+      "path": "admin-system\\node_modules",
+      "purpose": "Dependencies",
+      "fileCount": 1,
+      "lastAccessed": 1775396720270,
+      "keyFiles": []
+    },
+    "backend-java\\src": {
+      "path": "backend-java\\src",
+      "purpose": "Source code",
+      "fileCount": 0,
+      "lastAccessed": 1775396720270,
+      "keyFiles": []
+    },
+    "backend-python\\app": {
+      "path": "backend-python\\app",
+      "purpose": "Application code",
+      "fileCount": 1,
+      "lastAccessed": 1775396720271,
+      "keyFiles": [
+        "__init__.py"
+      ]
+    }
+  },
+  "hotPaths": [
+    {
+      "path": "C:\\Users\\sunyu\\.claude\\settings.json",
+      "accessCount": 4,
+      "lastAccessed": 1775397565966,
+      "type": "file"
+    },
+    {
+      "path": "task-api\\package.json",
+      "accessCount": 4,
+      "lastAccessed": 1775398520233,
+      "type": "file"
+    },
+    {
+      "path": "task-api\\src\\config\\database.ts",
+      "accessCount": 3,
+      "lastAccessed": 1775398524278,
+      "type": "file"
+    },
+    {
+      "path": "C:\\Users\\sunyu\\.claude\\plugins\\marketplaces\\omc\\scripts\\setup-progress.sh",
+      "accessCount": 1,
+      "lastAccessed": 1775396801832,
+      "type": "file"
+    },
+    {
+      "path": "C:\\Users\\sunyu\\.claude\\plugins\\marketplaces\\omc\\skills\\omc-setup\\phases\\01-install-claude-md.md",
+      "accessCount": 1,
+      "lastAccessed": 1775396888575,
+      "type": "file"
+    },
+    {
+      "path": "C:\\Users\\sunyu\\.claude\\plugins\\marketplaces\\omc\\skills\\omc-setup\\phases\\02-configure.md",
+      "accessCount": 1,
+      "lastAccessed": 1775397042652,
+      "type": "file"
+    },
+    {
+      "path": "C:\\Users\\sunyu\\.claude\\hud\\omc-hud.mjs",
+      "accessCount": 1,
+      "lastAccessed": 1775397087766,
+      "type": "file"
+    },
+    {
+      "path": "C:\\Users\\sunyu\\.claude\\plugins\\marketplaces\\omc\\skills\\omc-setup\\phases\\03-integrations.md",
+      "accessCount": 1,
+      "lastAccessed": 1775397386675,
+      "type": "file"
+    },
+    {
+      "path": "C:\\Users\\sunyu\\.claude\\plugins\\marketplaces\\omc\\skills\\omc-setup\\phases\\04-welcome.md",
+      "accessCount": 1,
+      "lastAccessed": 1775397694748,
+      "type": "file"
+    },
+    {
+      "path": "task-api\\tsconfig.json",
+      "accessCount": 1,
+      "lastAccessed": 1775398109821,
+      "type": "file"
+    },
+    {
+      "path": "task-api\\jest.config.js",
+      "accessCount": 1,
+      "lastAccessed": 1775398112907,
+      "type": "file"
+    },
+    {
+      "path": "task-api\\src\\types\\index.ts",
+      "accessCount": 1,
+      "lastAccessed": 1775398134095,
+      "type": "file"
+    },
+    {
+      "path": "task-api\\src\\models\\Task.ts",
+      "accessCount": 1,
+      "lastAccessed": 1775398140026,
+      "type": "file"
+    },
+    {
+      "path": "task-api\\src\\services\\taskService.ts",
+      "accessCount": 1,
+      "lastAccessed": 1775398174204,
+      "type": "file"
+    },
+    {
+      "path": "task-api\\src\\middleware\\errorHandler.ts",
+      "accessCount": 1,
+      "lastAccessed": 1775398183960,
+      "type": "file"
+    },
+    {
+      "path": "task-api\\src\\middleware\\validateRequest.ts",
+      "accessCount": 1,
+      "lastAccessed": 1775398195897,
+      "type": "file"
+    },
+    {
+      "path": "task-api\\src\\controllers\\taskController.ts",
+      "accessCount": 1,
+      "lastAccessed": 1775398235366,
+      "type": "file"
+    },
+    {
+      "path": "task-api\\src\\routes\\taskRoutes.ts",
+      "accessCount": 1,
+      "lastAccessed": 1775398241056,
+      "type": "file"
+    },
+    {
+      "path": "task-api\\src\\index.ts",
+      "accessCount": 1,
+      "lastAccessed": 1775398249847,
+      "type": "file"
+    },
+    {
+      "path": "task-api\\tests\\task.test.ts",
+      "accessCount": 1,
+      "lastAccessed": 1775398290340,
+      "type": "file"
+    },
+    {
+      "path": "task-api\\tests\\setup.ts",
+      "accessCount": 1,
+      "lastAccessed": 1775398290813,
+      "type": "file"
+    },
+    {
+      "path": "task-api\\README.md",
+      "accessCount": 1,
+      "lastAccessed": 1775398308999,
+      "type": "file"
+    }
+  ],
+  "userDirectives": []
+}

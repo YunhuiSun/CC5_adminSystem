@@ -34,7 +34,12 @@
       "Bash(git reset:*)",
       "Bash(git add:*)",
       "Bash(git commit:*)",
-      "Skill(statusline)"
+      "Skill(statusline)",
+      "Bash(git push:*)",
+      "Read(//c/Users/sunyu/.claude/commands/**)",
+      "Bash(gh auth:*)",
+      "Bash(bash:*)",
+      "Bash(rm:*)"
     ]
   }
 }
