@@ -139,6 +139,12 @@
   },
   "hotPaths": [
     {
+      "path": "admin-system\\src\\styles\\theme.ts",
+      "accessCount": 5,
+      "lastAccessed": 1775638658077,
+      "type": "file"
+    },
+    {
       "path": "C:\\Users\\sunyu\\.claude\\settings.json",
       "accessCount": 4,
       "lastAccessed": 1775397565966,
@@ -148,6 +154,12 @@
       "path": "task-api\\package.json",
       "accessCount": 4,
       "lastAccessed": 1775398520233,
+      "type": "file"
+    },
+    {
+      "path": "admin-system\\src\\store\\themeStyle.ts",
+      "accessCount": 4,
+      "lastAccessed": 1775638646911,
       "type": "file"
     },
     {
@@ -184,18 +196,6 @@
       "path": "admin-system\\package.json",
       "accessCount": 3,
       "lastAccessed": 1775637910432,
-      "type": "file"
-    },
-    {
-      "path": "admin-system\\src\\store\\themeStyle.ts",
-      "accessCount": 3,
-      "lastAccessed": 1775638507635,
-      "type": "file"
-    },
-    {
-      "path": "admin-system\\src\\styles\\theme.ts",
-      "accessCount": 3,
-      "lastAccessed": 1775638507670,
       "type": "file"
     },
     {

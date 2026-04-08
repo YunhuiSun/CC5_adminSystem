@@ -53,6 +53,7 @@ const AppHeader = ({ collapsed, setCollapsed }: AppHeaderProps) => {
     { value: 'modern', label: '简约风格' },
     { value: 'classic', label: '古典风格' },
     { value: 'tech', label: '科技风格' },
+    { value: 'obsidian', label: '黑曜石' },
   ]
 
   const handleThemeChange = (value: ThemeStyle) => {
@@ -62,6 +63,9 @@ const AppHeader = ({ collapsed, setCollapsed }: AppHeaderProps) => {
   const getHeaderBackground = () => {
     if (themeStyle === 'default') {
       return '#001529'
+    }
+    if (themeStyle === 'obsidian') {
+      return '#141416'
     }
     return colorBgContainer
   }

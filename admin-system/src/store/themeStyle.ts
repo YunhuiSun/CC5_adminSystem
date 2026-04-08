@@ -1,7 +1,7 @@
 import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
 
-export type ThemeStyle = 'default' | 'modern' | 'classic' | 'tech'
+export type ThemeStyle = 'default' | 'modern' | 'classic' | 'tech' | 'obsidian'
 
 interface ThemeState {
   themeStyle: ThemeStyle
