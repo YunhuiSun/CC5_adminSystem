@@ -185,7 +185,7 @@ const UserPage = () => {
   ]
 
   return (
-    <div className={`${styles.container} ${styles[themeStyle]}`}
+    <div className={`${styles.container} ${styles[themeStyle]}`}>
       <Card>
         <div className={styles.toolbar}>
           <Space>
