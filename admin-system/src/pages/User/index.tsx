@@ -17,6 +17,7 @@ import type { ColumnsType } from 'antd/es/table'
 import type { User } from '@/types'
 import { getUserList, addUser, updateUser, deleteUser } from '@/api/user'
 import { getAllRoles } from '@/api/role'
+import { useThemeStore } from '@/store/themeStyle'
 import styles from './index.module.css'
 
 const UserPage = () => {
@@ -30,6 +31,7 @@ const UserPage = () => {
   const [editingUser, setEditingUser] = useState<User | null>(null)
   const [form] = Form.useForm()
   const [roles, setRoles] = useState<{ id: number; name: string }[]>([])
+  const { themeStyle } = useThemeStore()
 
   const fetchData = async () => {
     setLoading(true)
@@ -183,7 +185,7 @@ const UserPage = () => {
   ]
 
   return (
-    <div className={styles.container}>
+    <div className={`${styles.container} ${styles[themeStyle]}`}
       <Card>
         <div className={styles.toolbar}>
           <Space>

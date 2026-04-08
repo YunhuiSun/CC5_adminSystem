@@ -7,3 +7,58 @@
   justify-content: space-between;
   margin-bottom: 16px;
 }
+
+/* 黑曜石风格 - Obsidian Command Center */
+.obsidian .container {
+  background: #0d0d0f;
+}
+
+.obsidian :global(.ant-table) {
+  background: #141416;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.obsidian :global(.ant-table-thead > tr > th) {
+  background: #1a1a1e !important;
+  color: #71717a !important;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06) !important;
+  padding: 14px 16px;
+}
+
+.obsidian :global(.ant-table-tbody > tr > td) {
+  color: #a1a1aa;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  padding: 14px 16px;
+}
+
+.obsidian :global(.ant-table-tbody > tr:hover > td) {
+  background: rgba(212, 168, 83, 0.08) !important;
+}
+
+.obsidian :global(.ant-table-tbody > tr:nth-child(even)) {
+  background: rgba(212, 168, 83, 0.02);
+}
+
+.obsidian :global(.ant-modal-content) {
+  background: #202024;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.obsidian :global(.ant-modal-header) {
+  background: #202024;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.obsidian :global(.ant-modal-title) {
+  color: #ffffff;
+  font-family: 'Playfair Display', serif;
+}
+
+.obsidian :global(.ant-form-item-label > label) {
+  color: #a1a1aa;
+}

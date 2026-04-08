@@ -9,3 +9,55 @@
 .bottomCharts {
   margin-top: 16px;
 }
+
+/* 黑曜石风格 - Obsidian Command Center */
+.obsidian .container {
+  background: #0d0d0f;
+}
+
+.obsidian .chartCard {
+  background: rgba(26, 26, 30, 0.8);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  padding: 20px 24px;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.obsidian .chartCard:hover {
+  border-color: rgba(212, 168, 83, 0.2);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
+.obsidian .bottomCharts {
+  margin-top: 16px;
+}
+
+/* 指标卡片样式 */
+.obsidian :global(.ant-card) {
+  background: rgba(26, 26, 30, 0.8);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+}
+
+.obsidian :global(.ant-card:hover) {
+  border-color: rgba(212, 168, 83, 0.2);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+}
+
+.obsidian :global(.ant-card-head) {
+  background: transparent;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  color: #ffffff;
+}
+
+.obsidian :global(.ant-card-head-title) {
+  color: #ffffff;
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+}
+
+.obsidian :global(.ant-card-body) {
+  color: #a1a1aa;
+}

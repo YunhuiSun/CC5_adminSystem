@@ -13,6 +13,7 @@ import { SearchOutlined, DeleteOutlined } from '@ant-design/icons'
 import type { ColumnsType } from 'antd/es/table'
 import type { OperationLog } from '@/types'
 import { getOperationLogList, clearOperationLog, deleteOperationLog } from '@/api/log'
+import { useThemeStore } from '@/store/themeStyle'
 import styles from './index.module.css'
 
 const OperationLogPage = () => {
@@ -22,6 +23,7 @@ const OperationLogPage = () => {
   const [pageNum, setPageNum] = useState(1)
   const [pageSize, setPageSize] = useState(10)
   const [keyword, setKeyword] = useState('')
+  const { themeStyle } = useThemeStore()
 
   const fetchData = async () => {
     setLoading(true)
@@ -154,7 +156,7 @@ const OperationLogPage = () => {
   ]
 
   return (
-    <div className={styles.container}>
+    <div className={`${styles.container} ${styles[themeStyle]}`}>
       <Card>
         <div className={styles.toolbar}>
           <Space>

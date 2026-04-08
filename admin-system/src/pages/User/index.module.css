@@ -7,3 +7,134 @@
   justify-content: space-between;
   margin-bottom: 16px;
 }
+
+/* 黑曜石风格 - Obsidian Command Center */
+.obsidian .container {
+  background: #0d0d0f;
+}
+
+.obsidian .toolbar {
+  margin-bottom: 16px;
+}
+
+.obsidian :global(.ant-table) {
+  background: #141416;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.obsidian :global(.ant-table-thead > tr > th) {
+  background: #1a1a1e !important;
+  color: #71717a !important;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06) !important;
+  padding: 14px 16px;
+}
+
+.obsidian :global(.ant-table-tbody > tr > td) {
+  color: #a1a1aa;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  padding: 14px 16px;
+}
+
+.obsidian :global(.ant-table-tbody > tr:hover > td) {
+  background: rgba(212, 168, 83, 0.08) !important;
+}
+
+.obsidian :global(.ant-table-tbody > tr:nth-child(even)) {
+  background: rgba(212, 168, 83, 0.02);
+}
+
+.obsidian :global(.ant-table-tbody > tr:nth-child(even):hover > td) {
+  background: rgba(212, 168, 83, 0.08) !important;
+}
+
+.obsidian :global(.ant-empty-description) {
+  color: #71717a;
+}
+
+.obsidian :global(.ant-pagination) {
+  margin-top: 16px;
+}
+
+.obsidian :global(.ant-pagination-item) {
+  background: #1a1a1e;
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.obsidian :global(.ant-pagination-item a) {
+  color: #a1a1aa;
+}
+
+.obsidian :global(.ant-pagination-item-active) {
+  background: rgba(212, 168, 83, 0.12) !important;
+  border-color: #d4a853 !important;
+}
+
+.obsidian :global(.ant-pagination-item-active a) {
+  color: #d4a853 !important;
+}
+
+.obsidian :global(.ant-modal-content) {
+  background: #202024;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.obsidian :global(.ant-modal-header) {
+  background: #202024;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.obsidian :global(.ant-modal-title) {
+  color: #ffffff;
+  font-family: 'Playfair Display', serif;
+}
+
+.obsidian :global(.ant-modal-close-x) {
+  color: #71717a;
+}
+
+.obsidian :global(.ant-form-item-label > label) {
+  color: #a1a1aa;
+}
+
+.obsidian :global(.ant-input),
+.obsidian :global(.ant-input-affix-wrapper) {
+  background: #1a1a1e;
+  border-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+.obsidian :global(.ant-input:hover),
+.obsidian :global(.ant-input-affix-wrapper:hover) {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.obsidian :global(.ant-input:focus),
+.obsidian :global(.ant-input-affix-wrapper:focus),
+.obsidian :global(.ant-input-affix-wrapper-focused) {
+  border-color: #d4a853;
+  box-shadow: 0 0 0 3px rgba(212, 168, 83, 0.15);
+}
+
+.obsidian :global(.ant-input::placeholder) {
+  color: #52525b;
+}
+
+.obsidian :global(.ant-select-selector) {
+  background: #1a1a1e !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+  color: #ffffff !important;
+}
+
+.obsidian :global(.ant-select:hover .ant-select-selector) {
+  border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+.obsidian :global(.ant-select-focused .ant-select-selector) {
+  border-color: #d4a853 !important;
+  box-shadow: 0 0 0 3px rgba(212, 168, 83, 0.15) !important;
+}

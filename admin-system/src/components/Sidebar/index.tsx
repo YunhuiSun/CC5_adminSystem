@@ -109,6 +109,8 @@ const Sidebar = ({ collapsed, onCollapse }: SidebarProps) => {
         return 'light'
       case 'modern':
         return 'light'
+      case 'obsidian':
+        return 'dark'
       default:
         return 'dark'
     }

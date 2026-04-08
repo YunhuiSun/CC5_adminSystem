@@ -13,6 +13,7 @@ import {
 } from 'antd'
 import { UserOutlined, EditOutlined, LockOutlined, SafetyOutlined } from '@ant-design/icons'
 import { useUserStore } from '@/store/user'
+import { useThemeStore } from '@/store/themeStyle'
 import { updateUser, changePassword } from '@/api/user'
 import styles from './index.module.css'
 
@@ -20,6 +21,7 @@ const { TabPane } = Tabs
 
 const ProfilePage = () => {
   const { user, setUser } = useUserStore()
+  const { themeStyle } = useThemeStore()
   const [basicForm] = Form.useForm()
   const [passwordForm] = Form.useForm()
   const [basicLoading, setBasicLoading] = useState(false)
@@ -68,7 +70,7 @@ const ProfilePage = () => {
   }
 
   return (
-    <div className={styles.container}>
+    <div className={`${styles.container} ${styles[themeStyle]}`}>
       <Row gutter={24}>
         <Col span={8}>
           <Card className={styles.profileCard}>

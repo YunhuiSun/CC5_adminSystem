@@ -36,3 +36,81 @@
   max-width: 400px;
   padding-top: 16px;
 }
+
+/* 黑曜石风格 - Obsidian Command Center */
+.obsidian .container {
+  background: #0d0d0f;
+}
+
+.obsidian .profileCard {
+  background: rgba(26, 26, 30, 0.8);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.obsidian .avatarSection {
+  padding: 24px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  margin-bottom: 24px;
+}
+
+.obsidian .avatar {
+  background: linear-gradient(135deg, #d4a853 0%, #b8923d 100%);
+  box-shadow: 0 4px 16px rgba(212, 168, 83, 0.25);
+}
+
+.obsidian .username {
+  color: #ffffff;
+  font-family: 'Playfair Display', serif;
+}
+
+.obsidian .role {
+  color: #d4a853;
+  font-size: 14px;
+}
+
+.obsidian .infoList {
+  text-align: left;
+  color: #a1a1aa;
+}
+
+.obsidian .infoList :global(.ant-descriptions-item-label) {
+  color: #71717a;
+}
+
+.obsidian .infoList :global(.ant-descriptions-item-content) {
+  color: #a1a1aa;
+}
+
+.obsidian .form {
+  max-width: 400px;
+  padding-top: 16px;
+}
+
+.obsidian .form :global(.ant-form-item-label > label) {
+  color: #a1a1aa;
+}
+
+.obsidian .form :global(.ant-input) {
+  background: #1a1a1e;
+  border-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+.obsidian .form :global(.ant-input:focus) {
+  border-color: #d4a853;
+  box-shadow: 0 0 0 3px rgba(212, 168, 83, 0.15);
+}
+
+.obsidian :global(.ant-btn-primary) {
+  background: linear-gradient(135deg, #d4a853 0%, #b8923d 100%);
+  border: none;
+  box-shadow: 0 2px 8px rgba(212, 168, 83, 0.25);
+}
+
+.obsidian :global(.ant-btn-primary:hover) {
+  background: linear-gradient(135deg, #e8c078 0%, #d4a853 100%);
+  box-shadow: 0 4px 16px rgba(212, 168, 83, 0.35);
+}

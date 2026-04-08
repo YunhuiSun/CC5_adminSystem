@@ -17,6 +17,7 @@ import { PlusOutlined, SearchOutlined, DeleteOutlined, EditOutlined, SettingOutl
 import type { ColumnsType } from 'antd/es/table'
 import type { Role } from '@/types'
 import { getRoleList, addRole, updateRole, deleteRole, assignRolePermissions } from '@/api/role'
+import { useThemeStore } from '@/store/themeStyle'
 import styles from './index.module.css'
 
 const RolePage = () => {
@@ -30,6 +31,7 @@ const RolePage = () => {
   const [permModalVisible, setPermModalVisible] = useState(false)
   const [editingRole, setEditingRole] = useState<Role | null>(null)
   const [form] = Form.useForm()
+  const { themeStyle } = useThemeStore()
 
   const fetchData = async () => {
     setLoading(true)
@@ -226,7 +228,7 @@ const RolePage = () => {
   ]
 
   return (
-    <div className={styles.container}>
+    <div className={`${styles.container} ${styles[themeStyle]}`}
       <Card>
         <div className={styles.toolbar}>
           <Space>

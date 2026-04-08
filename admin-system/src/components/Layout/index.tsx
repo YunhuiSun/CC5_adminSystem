@@ -34,8 +34,8 @@ const AppLayout = () => {
           }}
         >
           <AppHeader collapsed={collapsed} setCollapsed={setCollapsed} />
-          <Content className={styles.content}>
-            <div className={styles.main}>
+          <Content className={`${styles.content} ${styles[themeStyle]}`}>
+            <div className={`${styles.main} ${styles[themeStyle]}`}>
               <Outlet />
             </div>
           </Content>

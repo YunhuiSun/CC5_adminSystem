@@ -17,6 +17,7 @@ import { PlusOutlined, SearchOutlined, DeleteOutlined, EditOutlined } from '@ant
 import type { ColumnsType } from 'antd/es/table'
 import type { Menu } from '@/types'
 import { getMenuList, addMenu, updateMenu, deleteMenu } from '@/api/menu'
+import { useThemeStore } from '@/store/themeStyle'
 import styles from './index.module.css'
 
 const MenuPage = () => {
@@ -25,6 +26,7 @@ const MenuPage = () => {
   const [editingMenu, setEditingMenu] = useState<Menu | null>(null)
   const [form] = Form.useForm()
   const [data, setData] = useState<Menu[]>([])
+  const { themeStyle } = useThemeStore()
 
   const fetchData = async () => {
     setLoading(true)
@@ -148,7 +150,7 @@ const MenuPage = () => {
   ]
 
   return (
-    <div className={styles.container}>
+    <div className={`${styles.container} ${styles[themeStyle]}`}
       <Card>
         <div className={styles.toolbar}>
           <Space>
