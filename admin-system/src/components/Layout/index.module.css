@@ -82,3 +82,18 @@
 .default .main {
   background: #ffffff;
 }
+
+/* 黑曜石风格 - Obsidian Command Center */
+.obsidian .sider {
+  background: linear-gradient(180deg, #141416 0%, #0d0d0f 100%);
+  border-right: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.obsidian .mainLayout {
+  background: #0d0d0f;
+}
+
+.obsidian .main {
+  background: #0d0d0f;
+  min-height: calc(100vh - 64px);
+}

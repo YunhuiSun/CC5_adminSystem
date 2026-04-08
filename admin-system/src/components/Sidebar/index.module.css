@@ -70,3 +70,49 @@
   border-bottom: 1px solid #f0f0f0;
   background: #ffffff;
 }
+
+/* 黑曜石风格 - Obsidian Command Center */
+.obsidian {
+  background: linear-gradient(180deg, #141416 0%, #0d0d0f 100%);
+  border-right: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.obsidian .logo {
+  color: #d4a853;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  background: linear-gradient(90deg, transparent, rgba(212, 168, 83, 0.05), transparent);
+  font-family: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
+  text-shadow: 0 0 20px rgba(212, 168, 83, 0.3);
+  letter-spacing: 0.05em;
+}
+
+.obsidian .menu {
+  background: transparent !important;
+  border: none;
+}
+
+.obsidian .menu :global(.ant-menu-item) {
+  color: #a1a1aa;
+  border-radius: 8px;
+  margin: 2px 8px;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.obsidian .menu :global(.ant-menu-item):hover {
+  background: rgba(212, 168, 83, 0.08) !important;
+  color: #d4a853;
+}
+
+.obsidian .menu :global(.ant-menu-item-selected) {
+  background: rgba(212, 168, 83, 0.12) !important;
+  color: #d4a853 !important;
+}
+
+.obsidian .menu :global(.ant-menu-item-selected)::after {
+  border-right-color: #d4a853 !important;
+}
+
+.obsidian .menu :global(.ant-menu-submenu-title):hover {
+  background: rgba(212, 168, 83, 0.08) !important;
+  color: #d4a853;
+}

@@ -340,3 +340,67 @@
 .modern .user:hover {
   background: rgba(0, 0, 0, 0.025);
 }
+
+/* 黑曜石风格 - Obsidian Command Center */
+.obsidian {
+  background: linear-gradient(90deg, #141416 0%, #1a1a1e 100%) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.3);
+}
+
+.obsidian .trigger {
+  color: #71717a;
+}
+
+.obsidian .trigger:hover {
+  color: #d4a853;
+  background: rgba(212, 168, 83, 0.1);
+}
+
+.obsidian .themeLabel {
+  color: #a1a1aa;
+}
+
+.obsidian .themeSelector :global(.ant-select-selector) {
+  background: #1a1a1e !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+  color: #d4a853 !important;
+}
+
+.obsidian .themeSelector :global(.ant-select-selection-item) {
+  color: #d4a853 !important;
+}
+
+.obsidian .themeIcon {
+  color: #d4a853;
+}
+
+.obsidian .themeSelector:hover :global(.ant-select-selector) {
+  border-color: #d4a853 !important;
+  box-shadow: 0 0 12px rgba(212, 168, 83, 0.2);
+}
+
+.obsidian .themeDropdown :global(.ant-select-item-option-selected) {
+  background-color: rgba(212, 168, 83, 0.12);
+}
+
+.obsidian .themeDropdown :global(.ant-select-item-option-active) {
+  background-color: rgba(212, 168, 83, 0.06);
+}
+
+.obsidian .bellIcon {
+  color: #71717a;
+}
+
+.obsidian .bellIcon:hover {
+  color: #d4a853;
+}
+
+.obsidian .user {
+  color: #a1a1aa;
+}
+
+.obsidian .user:hover {
+  background: rgba(212, 168, 83, 0.1);
+  color: #ffffff;
+}
