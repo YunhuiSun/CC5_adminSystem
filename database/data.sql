@@ -12,21 +12,7 @@ INSERT INTO sys_role (id, name, code, description, status, create_time) VALUES
 (2, '普通用户', 'user', '普通用户权限', 1, '2024-01-01 00:00:00'),
 (3, '测试人员', 'tester', '测试人员权限', 1, '2024-01-01 00:00:00');
 
--- ============================================
--- 2. 插入用户数据
--- 密码: 123456 (BCrypt加密后的值)
--- ============================================
-INSERT INTO sys_user (id, username, password, nickname, email, phone, avatar, status, role_id, create_time) VALUES
-(1, 'admin', '$2a$10$N.zmdr9k7uOCQb376NoUnuTJ8iAt6Z5EHsM8lE9lBOsl7iAt6Z5EO', '超级管理员', 'admin@example.com', '13800138000', NULL, 1, 1, '2024-01-01 00:00:00'),
-(2, 'user', '$2a$10$N.zmdr9k7uOCQb376NoUnuTJ8iAt6Z5EHsM8lE9lBOsl7iAt6Z5EO', '普通用户', 'user@example.com', '13800138001', NULL, 1, 2, '2024-01-02 00:00:00'),
-(3, 'tester', '$2a$10$N.zmdr9k7uOCQb376NoUnuTJ8iAt6Z5EHsM8lE9lBOsl7iAt6Z5EO', '测试人员', 'tester@example.com', '13800138002', NULL, 1, 3, '2024-01-03 00:00:00'),
-(4, 'zhangsan', '$2a$10$N.zmdr9k7uOCQb376NoUnuTJ8iAt6Z5EHsM8lE9lBOsl7iAt6Z5EO', '张三', 'zhangsan@example.com', '13800138003', NULL, 1, 2, '2024-01-04 00:00:00'),
-(5, 'lisi', '$2a$10$N.zmdr9k7uOCQb376NoUnuTJ8iAt6Z5EHsM8lE9lBOsl7iAt6Z5EO', '李四', 'lisi@example.com', '13800138004', NULL, 1, 2, '2024-01-05 00:00:00'),
-(6, 'wangwu', '$2a$10$N.zmdr9k7uOCQb376NoUnuTJ8iAt6Z5EHsM8lE9lBOsl7iAt6Z5EO', '王五', 'wangwu@example.com', '13800138005', NULL, 0, 2, '2024-01-06 00:00:00'),
-(7, 'zhaoliu', '$2a$10$N.zmdr9k7uOCQb376NoUnuTJ8iAt6Z5EHsM8lE9lBOsl7iAt6Z5EO', '赵六', 'zhaoliu@example.com', '13800138006', NULL, 1, 2, '2024-01-07 00:00:00'),
-(8, 'sunqi', '$2a$10$N.zmdr9k7uOCQb376NoUnuTJ8iAt6Z5EHsM8lE9lBOsl7iAt6Z5EO', '孙七', 'sunqi@example.com', '13800138007', NULL, 1, 2, '2024-01-08 00:00:00'),
-(9, 'zhouba', '$2a$10$N.zmdr9k7uOCQb376NoUnuTJ8iAt6Z5EHsM8lE9lBOsl7iAt6Z5EO', '周八', 'zhouba@example.com', '13800138008', NULL, 1, 3, '2024-01-09 00:00:00'),
-(10, 'wujiu', '$2a$10$N.zmdr9k7uOCQb376NoUnuTJ8iAt6Z5EHsM8lE9lBOsl7iAt6Z5EO', '吴九', 'wujiu@example.com', '13800138009', NULL, 1, 2, '2024-01-10 00:00:00');
+-- ============================================-- 2. 插入用户数据-- 密码: 123456 (BCrypt加密后的值)-- ============================================INSERT INTO sys_user (id, username, password, nickname, email, phone, avatar, status, role_id, create_time) VALUES(1, 'admin', '$2b$12$5SRVX9pajTF1QAHTXtDTBuxbzDzI2Cfi3ljclRFOUyJ1WbTdBQ6T.', '超级管理员', 'admin@example.com', '13800138000', NULL, 1, 1, '2024-01-01 00:00:00'),(2, 'user', '$2b$12$5SRVX9pajTF1QAHTXtDTBuxbzDzI2Cfi3ljclRFOUyJ1WbTdBQ6T.', '普通用户', 'user@example.com', '13800138001', NULL, 1, 2, '2024-01-02 00:00:00'),(3, 'tester', '$2b$12$5SRVX9pajTF1QAHTXtDTBuxbzDzI2Cfi3ljclRFOUyJ1WbTdBQ6T.', '测试人员', 'tester@example.com', '13800138002', NULL, 1, 3, '2024-01-03 00:00:00'),(4, 'zhangsan', '$2b$12$5SRVX9pajTF1QAHTXtDTBuxbzDzI2Cfi3ljclRFOUyJ1WbTdBQ6T.', '张三', 'zhangsan@example.com', '13800138003', NULL, 1, 2, '2024-01-04 00:00:00'),(5, 'lisi', '$2b$12$5SRVX9pajTF1QAHTXtDTBuxbzDzI2Cfi3ljclRFOUyJ1WbTdBQ6T.', '李四', 'lisi@example.com', '13800138004', NULL, 1, 2, '2024-01-05 00:00:00'),(6, 'wangwu', '$2b$12$5SRVX9pajTF1QAHTXtDTBuxbzDzI2Cfi3ljclRFOUyJ1WbTdBQ6T.', '王五', 'wangwu@example.com', '13800138005', NULL, 0, 2, '2024-01-06 00:00:00'),(7, 'zhaoliu', '$2b$12$5SRVX9pajTF1QAHTXtDTBuxbzDzI2Cfi3ljclRFOUyJ1WbTdBQ6T.', '赵六', 'zhaoliu@example.com', '13800138006', NULL, 1, 2, '2024-01-07 00:00:00'),(8, 'sunqi', '$2b$12$5SRVX9pajTF1QAHTXtDTBuxbzDzI2Cfi3ljclRFOUyJ1WbTdBQ6T.', '孙七', 'sunqi@example.com', '13800138007', NULL, 1, 2, '2024-01-08 00:00:00'),(9, 'zhouba', '$2b$12$5SRVX9pajTF1QAHTXtDTBuxbzDzI2Cfi3ljclRFOUyJ1WbTdBQ6T.', '周八', 'zhouba@example.com', '13800138008', NULL, 1, 3, '2024-01-09 00:00:00'),(10, 'wujiu', '$2b$12$5SRVX9pajTF1QAHTXtDTBuxbzDzI2Cfi3ljclRFOUyJ1WbTdBQ6T.', '吴九', 'wujiu@example.com', '13800138009', NULL, 1, 2, '2024-01-10 00:00:00');
 
 -- ============================================
 -- 3. 插入菜单数据

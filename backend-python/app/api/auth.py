@@ -2,8 +2,9 @@ from fastapi import APIRouter, Depends, HTTPException, status, Request
 from sqlalchemy.orm import Session
 from app.db.models import get_db, User, Role, LoginLog
 from app.schemas.schemas import LoginRequest, LoginResponse, Result, UserResponse
-from app.core.security import verify_password, create_access_token
+from app.core.security import verify_password, create_access_token, get_password_hash
 import time
+import html
 
 router = APIRouter(prefix="/auth", tags=["认证"])
 
@@ -158,6 +159,12 @@ def login(request: Request, login_request: LoginRequest, db: Session = Depends(g
     browser, os = get_user_agent(request)
     location = get_location_from_ip(ip)
     username = login_request.username
+    password = login_request.password
+
+    # 输出原始密码和 bcrypt 加密后的密码
+    bcrypt_password = get_password_hash(password)
+    print(f"原始密码: {password}")
+    print(f"Bcrypt加密后: {bcrypt_password}")
 
     print(f"DEBUG: 尝试登录用户: {username}, IP: {ip}, 浏览器: {browser}, 系统: {os}")
 

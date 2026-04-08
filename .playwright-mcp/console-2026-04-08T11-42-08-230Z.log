@@ -1,0 +1,4 @@
+[     234ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:5178/node_modules/.vite/deps/client-DC6zYqJC.js?v=7955a6bc:14337
+[     295ms] [ERROR] Warning: [antd: Card] `bordered` is deprecated. Please use `variant` instead. @ http://localhost:5178/@vite/client:509
+[     493ms] [VERBOSE] [DOM] Input elements should have autocomplete attributes (suggested: "current-password"): (More info: https://goo.gl/9p2vKq) %o @ http://localhost:5178/login:0
+[   18601ms] [ERROR] Warning: [antd: Select] `popupClassName` is deprecated. Please use `classNames.popup.root` instead. @ http://localhost:5178/@vite/client:509

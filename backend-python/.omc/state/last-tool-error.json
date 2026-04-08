@@ -1,0 +1,7 @@
+{
+  "tool_name": "mcp__plugin_playwright_playwright__browser_run_code",
+  "tool_input_preview": "{\"code\":\"async (page) => {\\n  // 等待页面加载完成\\n  await page.waitForSelector('input');\\n  \\n  // 填写用户名和密码\\n  const usernameInput = await page.locator('input[placeholder*=\\\"用户名\\\"]').first();\\n  const passwo...",
+  "error": "### Error\nTimeoutError: locator.click: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button:has-text(\"登录\")').first()\u001b[22m",
+  "timestamp": "2026-04-08T11:42:49.982Z",
+  "retry_count": 1
+}

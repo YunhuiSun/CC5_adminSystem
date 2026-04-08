@@ -1,4 +1,4 @@
-from pydantic import BaseModel, Field, EmailStr
+from pydantic import BaseModel, Field
 from typing import Optional, List
 from datetime import datetime
 
@@ -43,7 +43,7 @@ class LoginResponse(BaseModel):
 class UserBase(BaseModel):
     username: str = Field(..., min_length=1, max_length=50)
     nickname: str = Field(..., min_length=1, max_length=50)
-    email: Optional[EmailStr] = None
+    email: Optional[str] = None
     phone: Optional[str] = None
     avatar: Optional[str] = None
     status: int = Field(default=1, ge=0, le=1)

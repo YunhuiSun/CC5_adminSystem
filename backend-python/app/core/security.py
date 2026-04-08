@@ -6,17 +6,21 @@ from app.core.config import settings
 
 def verify_password(plain_password: str, hashed_password: str) -> bool:
     """验证密码"""
-    import hashlib
-    # 计算明文密码的哈希
-    plain_hash = hashlib.sha256(plain_password.encode()).hexdigest()
-    # 比较哈希值
-    return plain_hash == hashed_password
+    import bcrypt
+    # 处理不同版本的 bcrypt 哈希前缀 ($2a$, $2b$, $2y$)
+    # bcrypt 库只接受 $2b$ 前缀，需要转换
+    if hashed_password.startswith('$2a$'):
+        hashed_password = '$2b$' + hashed_password[4:]
+    elif hashed_password.startswith('$2y$'):
+        hashed_password = '$2b$' + hashed_password[4:]
+    return bcrypt.checkpw(plain_password.encode('utf-8'), hashed_password.encode('utf-8'))
 
 
 def get_password_hash(password: str) -> str:
-    """获取密码哈希 - 临时使用SHA256"""
-    import hashlib
-    return hashlib.sha256(password.encode()).hexdigest()
+    """获取密码哈希"""
+    import bcrypt
+    salt = bcrypt.gensalt()
+    return bcrypt.hashpw(password.encode('utf-8'), salt).decode('utf-8')
 
 
 def create_access_token(data: dict) -> str:
