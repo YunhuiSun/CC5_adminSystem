@@ -1,3 +1,11 @@
+/* ==========================================================================
+   Google Fonts Import
+   ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+/* ==========================================================================
+   CSS Reset & Base Styles
+   ========================================================================== */
 * {
   margin: 0;
   padding: 0;
@@ -8,39 +16,82 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #f0f2f5;
 }
 
 #root {
   min-height: 100vh;
 }
 
-/* 全局表格样式 - 所有页面共用 */
-.ant-table-tbody > tr > td {
-  padding: 4px 12px !important;
+/* ==========================================================================
+   Global Animation Keyframes
+   ========================================================================== */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
-.ant-table-tbody > tr:nth-child(even) > td {
-  background-color: #e2e8f0 !important;
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
-.ant-table-tbody > tr:nth-child(odd) > td {
-  background-color: #f8fafc !important;
+@keyframes cardReveal {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.ant-table-tbody > tr:hover > td {
-  background-color: #94a3b8 !important;
+/* ==========================================================================
+   Obsidian Theme CSS Variables (applied via .obsidian class)
+   ========================================================================== */
+.obsidian {
+  /* Obsidian Core Surfaces */
+  --obsidian-900: #0d0d0f;
+  --obsidian-800: #141416;
+  --obsidian-700: #1a1a1e;
+  --obsidian-600: #202024;
+
+  /* Amber Accent */
+  --amber-500: #d4a853;
+  --amber-400: #e8c078;
+  --amber-600: #b8923d;
+
+  /* Text */
+  --text-primary: #ffffff;
+  --text-secondary: #a1a1aa;
+  --text-tertiary: #71717a;
+
+  /* Borders */
+  --border-subtle: rgba(255, 255, 255, 0.06);
+  --border-default: rgba(255, 255, 255, 0.1);
 }
 
-.ant-table {
-  color: #334155 !important;
-  font-size: 14px !important;
+/* Obsidian scrollbar styling */
+.obsidian ::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
 }
 
-.ant-table-thead > tr > th {
-  background-color: #cbd5e1 !important;
-  color: #475569 !important;
-  font-weight: 600 !important;
-  border-bottom: 1px solid #94a3b8 !important;
-  padding: 6px 12px !important;
+.obsidian ::-webkit-scrollbar-track {
+  background: var(--obsidian-800);
+}
+
+.obsidian ::-webkit-scrollbar-thumb {
+  background: var(--obsidian-600);
+  border-radius: 4px;
+}
+
+.obsidian ::-webkit-scrollbar-thumb:hover {
+  background: rgba(212, 168, 83, 0.3);
 }
