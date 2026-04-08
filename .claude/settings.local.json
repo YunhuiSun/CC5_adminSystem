@@ -39,7 +39,11 @@
       "Read(//c/Users/sunyu/.claude/commands/**)",
       "Bash(gh auth:*)",
       "Bash(bash:*)",
-      "Bash(rm:*)"
+      "Bash(rm:*)",
+      "mcp__plugin_oh-my-claudecode_t__python_repl",
+      "Bash(.venv\\\\Scripts\\\\pip install:*)",
+      "Bash(.venv/Scripts/pip install:*)",
+      "Bash(.venv/Scripts/python:*)"
     ]
   }
 }
